@@ -4,26 +4,142 @@ html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.container {
-  margin: 0;
-  padding: 0;
+.navbar {
+  font-family: 'Open Sans', sans-serif;
+  background: black;
 }
-.site-header {
-  background-image: url(images/bg\ image\ 1.jpg);
-  background-size: cover;
-  height: 100vh;
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
 .jumbotron {
-  background: none;
+  background-image: url(./images/bg\ image\ 1.jpg);
+  background-size: cover;
+  height: 100vh;
   text-align: center;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
-.navbar {
-  color: #fff;
-  background: #000;
-  opacity: 0.5;
+.display-4,
+.lead {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
 }
+
+.display-4 {
+  font-size: 300%;
+  letter-spacing: 3px;
+  margin-top: 20%;
+  transform: translateY(-20%);
+}
+
+.lead {
+  font-size: 24;
+  letter-spacing: 2px;
+  margin-bottom: 15%;
+}
+
+.jumbotron .down-arrow {
+  position: absolute;
+  top: 95%;
+  left: 45%;
+}
+
+.down-arrow p {
+  margin-bottom: 0;
+}
+
+/* UTILITY */
+.tombol {
+  border-color: #FFB548;
+  background-color: #FFB548;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+}
+
+/* DESKTOP VIEW */
+@media (min-width: 992px) {
+  .navbar {
+    background: rgba(22, 22, 22, 0.26) !important;
+  }
+
+  .nav-link {
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .nav-link:hover {
+    border-bottom: 3px solid #fff;
+    padding-bottom: 3px;
+  }
+
+  .jumbotron {
+    margin-top: -65px;
+  }
+
+  .display-4 {
+    font-size: 72px;
+  }
+
+  /* jumbotron content */
+  .lead {
+    margin-bottom: 5%;
+  }
+
+  .jumbotron .down-arrow {
+    top: 90%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .btn-warning {
   background-color: #FFB548;
