@@ -5,8 +5,8 @@ html {
 }
 
 .container {
-  margin-left: 0;
-  margin-right: 0;
+  margin: 0;
+  padding: 0;
 }
 .site-header {
   background-image: url(images/bg\ image\ 1.jpg);
@@ -33,6 +33,20 @@ html {
 .about-us {
   background-color: black;
   background-image: url(./images/bg\ image\ 2.png);
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+.game-features {
+  background-color: black;
+  background-image: url(./images/bg\ image\ 3.png);
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+.sys-req {
+  background-color: black;
+  background-image: url(./images/bg\ image\ 4.png);
   background-size: cover;
   box-sizing: border-box;
 }
