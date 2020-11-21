@@ -1,0 +1,38 @@
+body,
+html {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  margin-left: 0;
+  margin-right: 0;
+}
+.site-header {
+  background-image: url(images/bg\ image\ 1.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+
+.jumbotron {
+  background: none;
+  text-align: center;
+}
+
+.navbar {
+  color: #fff;
+  background: #000;
+  opacity: 0.5;
+}
+
+.btn-warning {
+  background-color: #FFB548;
+  border-color: #FFB548;
+}
+
+.about-us {
+  background-color: black;
+  background-image: url(./images/bg\ image\ 2.png);
+  background-size: cover;
+  box-sizing: border-box;
+}
