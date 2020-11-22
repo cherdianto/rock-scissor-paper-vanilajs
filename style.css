@@ -455,6 +455,10 @@ left: 2px;
     height: 100vh;
   }
 
+  .jumbotron .container>* {
+    margin: 50px 0;
+  }
+
   .display-4 {
     font-size: 72px;
   }
@@ -465,7 +469,7 @@ left: 2px;
   }
 
   .jumbotron .down-arrow {
-    top: 90%;
+    top: 85%;
   }
 
   /* aboutus desktop */
