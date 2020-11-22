@@ -28,20 +28,37 @@
         <!-- Nav Bar -->
         <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
             <div class="container">
-                <a class="navbar-brand" href="#">Logo</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav ml-auto">
-                        <a class="nav-link active" href="#jumbotron">Home <span class="sr-only">(current)</span></a>
-                        <a class="nav-link" href="#about-us">Work</a>
-                        <a class="nav-link" href="#game-features">Contact</a>
-                        <a class="nav-link" href="#sys-req">About Me</a>
-                        <a class="nav-link" href="#scores">Sign Up</a>
-                        <a class="nav-link" href="#subscribe">Login</a>
+                <div class="row" style="width: 100%; margin: 0;">
+                    <div class="col-lg-1 justify-content-between d-flex">
+                        <a class="navbar-brand" href="#">Logo</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
                     </div>
+                    <div class="col-lg d-flex ml-lg-5">
+                        <div class="collapse navbar-collapse align-item-center justify-content-between"
+                            id="navbarNavAltMarkup">
+                            <div class="navbar-nav">
+                                <a class="nav-link active ml-lg-3" href="#jumbotron">Home <span
+                                        class="sr-only">(current)</span></a>
+                                <a class="nav-link ml-lg-3" href="#about-us">Work</a>
+                                <a class="nav-link ml-lg-3" href="#game-features">Contact</a>
+                                <a class="nav-link ml-lg-3" href="#sys-req">About Me</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg d-flex">
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class="navbar-nav ml-auto">
+                                <a class="nav-link" href="#scores">Sign Up</a>
+                                <a class="nav-link ml-lg-2" href="#subscribe">Login</a>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
         </nav>
@@ -68,12 +85,14 @@
                     <div class="col-lg">
                         <h3 class="section-title">THE GAMES</h3>
                     </div>
-                    <div class="col-lg-7">
+                    <div class="col-lg-8">
                         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                             <ol class="carousel-indicators">
                                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
                             </ol>
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
@@ -122,8 +141,8 @@
                         <h3 class="section-title">FEATURES</h3>
                         <div id="games">
                             <div class="row">
-                                <div class="col-md-2">
-
+                                <div class="col-md-2 content-center">
+                                    <span class="dot" style="background-color: white !important;"></span>
                                 </div>
                                 <div class="col-md-10">
                                     <h4 class="title-feature">TRADITIONAL GAMES</h4>
@@ -132,21 +151,25 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-2">
-
+                                <div class="col-md-2 content-center">
+                                    <span class="dot"></span>
                                 </div>
                                 <div class="col-md-10">
                                     <h4 class="title-feature">GAME SUIT</h4>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-2">
-
+                                <div class="col-md-2 content-center">
+                                    <span class="dot"></span>
                                 </div>
                                 <div class="col-md-10">
                                     <h4 class="title-feature">TBD</h4>
                                 </div>
                             </div>
+
+                            <svg width="100" height="200">
+                                <line x1="32" y1="-100" x2="32" y2="115" stroke="white" stroke-width="2" />
+                            </svg>
                         </div>
                     </div>
                 </div>
@@ -156,7 +179,7 @@
         <!-- SYSTEM REQUIREMENTS -->
         <div id="sys-req" class="sys-req content-center">
             <div class="container">
-                <p class="sys-req-title">Can my computer run this game?</p>
+                <p class="sys-req-title what-so-special">Can my computer run this game?</p>
                 <div class="row">
                     <div class="col-lg-6">
                         <h3 class="section-title">SYSTEM REQUIREMENTS</h3>
@@ -301,7 +324,7 @@
                         <div class="card">
                             <div class="row">
                                 <div class="col-md-2"></div>
-                                <div class="col-md-7 d-flex justify-content-center mb-3 text-uppercase">
+                                <div class="col-md-7 d-flex mb-3 text-uppercase">
                                     <div class="d-inline-flex justify-content-center px-2 px-md-2 px-lg-3 pt-3"> <a
                                             href="#jumbotron">main</a> </div>
                                     <div class="d-inline-flex justify-content-center px-2 px-md-2 px-lg-3 pt-3"> <a
@@ -360,6 +383,13 @@
         </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+        </script>
+
+        <!-- on scroll -->
+        <script>
+            $(window).scroll(function () {
+                $('nav').toggleClass('scrolled', $(this).scrollTop() > 250);
+            });
         </script>
     </body>
 
