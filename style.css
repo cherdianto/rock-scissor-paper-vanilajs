@@ -11,6 +11,8 @@ html {
 .navbar {
   font-family: 'Open Sans', sans-serif;
   background: black;
+  position: relative;
+  z-index: 100;
 }
 
 .navbar-brand {
@@ -23,10 +25,23 @@ html {
 .jumbotron {
   background-image: url(./images/bg\ image\ 1.jpg);
   background-size: cover;
-  height: 100vh;
+  height: 85vh;
   text-align: center;
   padding-bottom: 0;
   margin-bottom: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.jumbotron::after {
+  content: '';
+  display: block;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, .1));
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: -10;
 }
 
 
@@ -38,10 +53,9 @@ html {
 }
 
 .display-4 {
-  font-size: 300%;
+  font-size: 12vw;
   letter-spacing: 3px;
   margin-top: 20%;
-  transform: translateY(-20%);
 }
 
 .lead {
@@ -52,8 +66,10 @@ html {
 
 .jumbotron .down-arrow {
   position: absolute;
-  top: 95%;
-  left: 45%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .down-arrow p {
@@ -63,9 +79,10 @@ html {
 /* ABOUT US */
 .about-us {
   text-align: center;
+  background-color: black;
   background-image: url(./images/bg\ image\ 2.png);
   background-size: cover;
-  height: 100vh;
+  height: 85vh;
   text-align: center;
   padding-bottom: 0;
   margin-bottom: 0;
@@ -92,11 +109,8 @@ html {
   padding-top: 15%;
 }
 
-
-
-
 .section-title {
-  font-size: 56px;
+  font-size: 2em;
   letter-spacing: 3px;
   text-align: center;
   padding-bottom: 30px;
@@ -114,17 +128,16 @@ html {
 .carousel-control-prev-icon {
   background-image: url(./images/scroll\ down.svg);
   transform: rotate(90deg);
-  /* width: 100%; */
 }
 
 .carousel-control-next-icon {
   background-image: url(./images/scroll\ down.svg);
   transform: rotate(270deg);
-  /* width: 100%; */
 }
 
 /* FEATURES */
 .game-features {
+  height: 85vh;
   background-image: url(./images/bg\ image\ 3.png);
   background-size: cover;
   position: relative;
@@ -144,27 +157,13 @@ html {
   bottom: 0;
   z-index: 0;
   background: radial-gradient(51.1% 80.48% at 30.85% 53.65%, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 19.2%, rgba(4, 5, 6, 0.520671) 47.48%, #080A0B 99.74%);
-
 }
 
 #features-content {
   margin-top: 10%;
 }
 
-.title-feature {
-  text-transform: uppercase;
-  font-size: 24px;
-  font-weight: 400;
-  letter-spacing: 2px;
-  color: #FFB548;
-}
 
-.text-feature {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
-  line-height: 22px;
-  font-weight: 400;
-}
 
 #games {
   margin-top: 10%;
@@ -172,6 +171,75 @@ html {
 
 #games .row {
   margin-top: 10%;
+}
+
+/* SISTEM -REQUIREMENTS */
+#sys-req {
+  height: 85vh;
+  background-color: black;
+  background-image: url(./images/bg\ image\ 4.png);
+  background-size: cover;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+#sys-req::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: -10;
+  background: radial-gradient(51.1% 80.48% at 30.85% 53.65%, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 19.2%, rgba(4, 5, 6, 0.520671) 47.48%, #080A0B 99.74%);
+}
+
+#sys-req .container {
+  padding-top: 10%;
+
+}
+
+#sys-req .container p {
+  text-align: left;
+}
+
+#sys-req .container .sys-req-title {
+  text-align: center;
+}
+
+/* table sys req */
+.table {
+  border-collapse: separate;
+  border-bottom-right-radius: 20px;
+  border: 1px solid rgba(161, 161, 161, 0.527);
+}
+
+.table-bordered td,
+.table-bordered th {
+  border: none;
+}
+
+td:first-child {
+  border-left: none;
+  border-right: 1px solid grey;
+}
+
+/* td:nth-child(1) {
+  border-top: 1px solid grey !important;
+} */
+
+td {
+  border-top: 1px solid grey !important;
+}
+
+tr:first-child {
+  border-top: none !important;
+  /* background-color: red; */
+}
+
+td:last-child {
+  border-right: none;
+  border-top: none;
 }
 
 
@@ -192,6 +260,24 @@ html {
   text-align: center;
   letter-spacing: 2px;
 }
+
+.title-feature {
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #FFB548;
+}
+
+.text-feature {
+  font-family: 'Open Sans', sans-serif;
+  font-size: .8em;
+  line-height: 22px;
+  font-weight: 400;
+  color: white;
+}
+
+
 
 /* DESKTOP VIEW */
 @media (min-width: 992px) {
@@ -217,6 +303,7 @@ html {
   /* jumbotron desktop */
   .jumbotron {
     margin-top: -65px;
+    height: 100vh;
   }
 
   .display-4 {
@@ -233,6 +320,10 @@ html {
   }
 
   /* aboutus desktop */
+  .about-us {
+    height: 100vh;
+  }
+
   .what-so-special {
     text-align: left;
   }
@@ -262,49 +353,32 @@ html {
   .carousel-control-prev-icon {
     width: 70%;
   }
-}
 
+  /* features desktop */
+  .game-features {
+    height: 100vh;
+  }
 
+  /* sistem requirement desktop */
+  #sys-req {
+    height: 100vh;
+  }
 
+  #sys-req .container .sys-req-title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+  }
 
+  /* UTILITY DESKTOP */
+  .section-title {
+    font-size: 56px;
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.sys-req {
-  background-color: black;
-  background-image: url(./images/bg\ image\ 4.png);
-  background-size: cover;
-  box-sizing: border-box;
+  .title-feature {
+    font-size: 24px;
+  }
 }
