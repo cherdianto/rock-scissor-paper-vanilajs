@@ -14,6 +14,10 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
+        <!-- icon library -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
         <!-- override css -->
         <link rel="stylesheet" href="style.css">
 
@@ -22,7 +26,7 @@
 
     <body>
         <!-- Nav Bar -->
-        <nav class="navbar navbar-expand-lg navbar-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
             <div class="container">
                 <a class="navbar-brand" href="#">Logo</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
@@ -31,12 +35,12 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav ml-auto">
-                        <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                        <a class="nav-link" href="#">Work</a>
-                        <a class="nav-link" href="#">Contact</a>
-                        <a class="nav-link" href="#">About Me</a>
-                        <a class="nav-link" href="#">Sign Up</a>
-                        <a class="nav-link" href="#">Login</a>
+                        <a class="nav-link active" href="#jumbotron">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#about-us">Work</a>
+                        <a class="nav-link" href="#game-features">Contact</a>
+                        <a class="nav-link" href="#sys-req">About Me</a>
+                        <a class="nav-link" href="#scores">Sign Up</a>
+                        <a class="nav-link" href="#subscribe">Login</a>
                     </div>
                 </div>
             </div>
@@ -44,7 +48,7 @@
         <!-- END OF NAV BAR -->
 
         <!-- JUMBOTRON -->
-        <div class="jumbotron jumbotron-fluid">
+        <div id="jumbotron" class="jumbotron jumbotron-fluid content-center">
             <div class="container">
                 <h1 class="display-4">PLAY TRADITIONAL GAME</h1>
                 <p class="lead">Experience New Traditional Game</p>
@@ -57,7 +61,7 @@
         </div>
 
         <!-- ABOUT & GALERY  -->
-        <div id="about-us" class="about-us">
+        <div id="about-us" class="about-us content-center">
             <div class="container">
                 <p class="what-so-special">What's so special?</p>
                 <div class="row align-item-center the-games">
@@ -109,7 +113,7 @@
         <!-- END OF ABOUT US -->
 
         <!-- FEATURES -->
-        <div id="game-features" class="game-features">
+        <div id="game-features" class="game-features content-center">
             <div class="container">
                 <div class="row">
                     <div class="col-lg"></div>
@@ -150,7 +154,7 @@
         </div>
 
         <!-- SYSTEM REQUIREMENTS -->
-        <div id="sys-req" class="sys-req">
+        <div id="sys-req" class="sys-req content-center">
             <div class="container">
                 <p class="sys-req-title">Can my computer run this game?</p>
                 <div class="row">
@@ -209,17 +213,17 @@
         <!-- END OF SYS-REQ -->
 
         <!-- SCORES -->
-        <div id="scores" class="scores">
+        <div id="scores" class="scores content-center">
             <div class="container">
-                <div class="row justify-content-md-center">
-                    <div class="col-lg-4 scores-wrapper">
+                <div class="row">
+                    <div class="col-lg-5 scores-wrapper">
                         <div class="scores-title">
                             <h3 class="section-title">TOP SCORES</h3>
                             <p class="text-feature">This top score from various games provided on this platform</p>
                             <a href="#" class="btn btn-primary tombol">SEE MORE</a>
                         </div>
                     </div>
-                    <div class="col-lg-8">
+                    <div class="col-lg-7 content-center">
                         <div class="testimonial">
                             <div id="evan" class="profil">
                                 <div class="profil-detail">
@@ -256,7 +260,7 @@
         <!-- END OF SCORES -->
 
         <!-- SUBSCRIBE -->
-        <div id="subscribe" class="subscribe">
+        <div id="subscribe" class="subscribe content-center">
             <div class="container">
                 <div class="row">
                     <div class="col-lg"></div>
@@ -267,15 +271,15 @@
                             email address. Everything else will be taken care of by us. We will send you emails
                             containing information about game. We don’t spam.</h4>
                         <form>
-                            <div class="form-row align-items-center">
-                                <div class="col-6">
+                            <div class="form-row">
+                                <div class="col-md-6 content-center">
                                     <label class="sr-only" for="inlineFormInputGroup">Username</label>
                                     <div class="input-group mb-2">
                                         <input type="text" class="form-control" id="inlineFormInputGroup"
                                             placeholder="youremail@binar.co,id">
                                     </div>
                                 </div>
-                                <div class="col-6">
+                                <div class="col-md-6 content-center">
                                     <button type="submit" class="btn btn-primary mb-2 tombol">Subscribe Now</button>
                                 </div>
                             </div>
@@ -288,6 +292,67 @@
             </div>
         </div>
         <!-- END OF SUBSCRIBE -->
+
+        <!-- FOOTER -->
+        <div id="footer" class="footer">
+            <div class="container">
+                <div class="row justify-content-center mx-auto">
+                    <div class="col-12 px-0 col-md-12">
+                        <div class="card">
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-7 d-flex justify-content-center mb-3 text-uppercase">
+                                    <div class="d-inline-flex justify-content-center px-2 px-md-2 px-lg-3 pt-3"> <a
+                                            href="#jumbotron">main</a> </div>
+                                    <div class="d-inline-flex justify-content-center px-2 px-md-2 px-lg-3 pt-3"> <a
+                                            href="#about-us">about</a> </div>
+                                    <div class="d-inline-flex justify-content-center px-2 px-md-2 px-lg-3 pt-3"> <a
+                                            href="#game-features">game features</a> </div>
+                                    <div class="d-inline-flex justify-content-center px-2 px-md-2 px-lg-3 pt-3"> <a
+                                            href="#sys-req">system requirements</a> </div>
+                                    <div class="d-inline-flex justify-content-center px-2 px-md-2 px-lg-3 pt-3"> <a
+                                            href="#scores">quotes</a> </div>
+                                </div>
+                                <div class="col-md-3 justify-content-center d-flex">
+                                    <a href="#">
+                                        <div class="d-inline-flex px-3 px-md-2 px-lg-3 pt-3">
+                                            <div class="fa fa-facebook"></div>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="d-inline-flex px-3 px-md-2 px-lg-3 pt-3">
+                                            <div class="fa fa-twitter"></div>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="d-inline-flex px-3 px-md-2 px-lg-3 pt-3">
+                                            <div class="fa fa-youtube"></div>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="d-inline-flex px-3 px-md-2 px-lg-3 pt-3">
+                                            <div class="fa fa-linkedin"></div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr style="border-color: rgb(189, 189, 189);">
+
+                <div class="row under-footer">
+                    <div class="col-lg-6 copyright text-capitalize">
+                        2018 Your Games, Inc. All Rights Reserved
+                    </div>
+                    <div class="col-lg-6 privacy-policy text-uppercase">
+                        privacy policy | terms of services | code of conduct
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END OF FOOTER -->
 
         <!-- BOOTSTRAP 4 SCRIPT -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
