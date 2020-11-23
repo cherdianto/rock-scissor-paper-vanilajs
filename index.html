@@ -25,6 +25,10 @@
     </head>
 
     <body>
+        <!-- back to top button -->
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="./images/scroll down.svg"
+                style="transform: rotate(180deg);"></button>
+
         <!-- Nav Bar -->
         <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
             <div class="container">
@@ -71,8 +75,10 @@
                 <p class="lead">Experience New Traditional Game</p>
                 <a href="#" class="btn btn-primary btn-lg tombol">PLAY NOW</a>
                 <div class="down-arrow">
-                    <p>THE STORY</p>
-                    <img src="./images/scroll down.svg" alt="down arrow">
+                    <a href="#about-us">
+                        <p style="text-decoration: none; color: white;">THE STORY</p>
+                        <img src="./images/scroll down.svg" alt="down arrow">
+                    </a>
                 </div>
             </div>
         </div>
@@ -179,10 +185,10 @@
         <!-- SYSTEM REQUIREMENTS -->
         <div id="sys-req" class="sys-req content-center">
             <div class="container">
-                <p class="sys-req-title what-so-special">Can my computer run this game?</p>
+                <p class="sys-req-title">Can my computer run this game?</p>
                 <div class="row">
                     <div class="col-lg-6">
-                        <h3 class="section-title">SYSTEM REQUIREMENTS</h3>
+                        <h3 class="section-title mb-lg-5">SYSTEM REQUIREMENTS</h3>
                     </div>
                 </div>
                 <div class="row">
@@ -243,7 +249,7 @@
                         <div class="scores-title">
                             <h3 class="section-title">TOP SCORES</h3>
                             <p class="text-feature">This top score from various games provided on this platform</p>
-                            <a href="#" class="btn btn-primary tombol">SEE MORE</a>
+                            <a href="#" class="btn btn-primary tombol mt-lg-4">SEE MORE</a>
                         </div>
                     </div>
                     <div class="col-lg-7 content-center">
@@ -251,29 +257,37 @@
                             <div id="evan" class="profil">
                                 <div class="profil-detail">
                                     <img src="./images/image 2.jpg" alt="evan lathi" class="avatar">
-                                    <p class="nama">Evan Lathi<br><span>PC Gamer</span></p>
+                                    <p class="nama mt-lg-0">Evan Lathi<br><span style="color: grey;">PC Gamer</span></p>
+                                    <div class="fa fa-twitter" style="color: grey;"></div>
                                 </div>
-                                <p class="testi">"One of my gaming highlights of the year."</p>
-                                <p class="date">October 18, 2018</p>
+                                <p class="testi mt-md-2 mt-sm-3">"One of my gaming highlights of the year."</p>
+                                <p class="date  mt-md-n2">October 18, 2018</p>
                             </div>
                             <div id="jada" class="profil">
                                 <div class="profil-detail">
                                     <img src="./images/image 3.jpg" alt="jada griffin" class="avatar">
-                                    <p class="nama">Jada Griffin<br><span>Nerdreactor</span></p>
+                                    <p class="nama mt-lg-0">Jada Griffin<br><span
+                                            style="color: grey;">Nerdreactor</span></p>
+                                    <div class="fa fa-twitter" style="color: grey;"></div>
                                 </div>
-                                <p class="testi">“The next big thing in the world of streaming and survival games.”
+                                <p class="testi mt-md-2 mt-sm-3">“The next big thing in the world of streaming and
+                                    survival
+                                    games.”
                                 </p>
-                                <p class="date">December 21, 2018</p>
+                                <p class="date  mt-md-n2">December 21, 2018</p>
                             </div>
 
                             <div id="aaron" class="profil">
                                 <div class="profil-detail">
                                     <img src="./images/image 1.jpg" alt="aaron williams" class="avatar">
-                                    <p class="nama">Aaron Williams <br><span>Uproxx</span></p>
+                                    <p class="nama mt-lg-0">Aaron Williams <br><span style="color: grey;">Uproxx</span>
+                                    </p>
+                                    <div class="fa fa-twitter" style="color: grey;"></div>
                                 </div>
-                                <p class="testi">“Snoop Dogg Playing The Wildly Entertaining ‘SOS’ Is Ridiculous.”
+                                <p class="testi mt-md-2 mt-sm-3">“Snoop Dogg Playing The Wildly Entertaining ‘SOS’ Is
+                                    Ridiculous.”
                                 </p>
-                                <p class="date">December 24, 2018</p>
+                                <p class="date  mt-md-n2">December 24, 2018</p>
                             </div>
                         </div>
                     </div>
@@ -302,7 +316,7 @@
                                             placeholder="youremail@binar.co,id">
                                     </div>
                                 </div>
-                                <div class="col-md-6 content-center">
+                                <div class="col-md-6 content-center" style="justify-content: stretch !important;">
                                     <button type="submit" class="btn btn-primary mb-2 tombol">Subscribe Now</button>
                                 </div>
                             </div>
@@ -367,10 +381,10 @@
 
                 <div class="row under-footer">
                     <div class="col-lg-6 copyright text-capitalize">
-                        2018 Your Games, Inc. All Rights Reserved
+                        &copy; 2018 Your Games, Inc. All Rights Reserved
                     </div>
                     <div class="col-lg-6 privacy-policy text-uppercase">
-                        privacy policy | terms of services | code of conduct
+                        <a href="#">policy</a> | <a href="#">terms of services</a> | <a href="#"> code of conduct</a>
                     </div>
                 </div>
             </div>
@@ -390,6 +404,31 @@
             $(window).scroll(function () {
                 $('nav').toggleClass('scrolled', $(this).scrollTop() > 250);
             });
+        </script>
+
+        <!-- back to top button -->
+        <script>
+            //Get the button
+            var mybutton = document.getElementById("myBtn");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function () {
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
         </script>
     </body>
 
