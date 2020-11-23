@@ -87,7 +87,7 @@
         <div id="about-us" class="about-us content-center">
             <div class="container">
                 <p class="what-so-special">What's so special?</p>
-                <div class="row align-item-center the-games">
+                <div class="row align-item-center">
                     <div class="col-lg">
                         <h3 class="section-title">THE GAMES</h3>
                     </div>
@@ -115,9 +115,6 @@
                                 </div>
                                 <div class="carousel-item">
                                     <img class="d-block w-100" src="./images/rockpaperstrategy.png" alt="Fifth slide">
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100" src="./images/rockpaperstrategy.png" alt="Sixth slide">
                                 </div>
                             </div>
                             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
@@ -149,6 +146,9 @@
                             <div class="row">
                                 <div class="col-md-2 content-center">
                                     <span class="dot" style="background-color: white !important;"></span>
+                                    <svg width="100" height="230">
+                                        <line x1="50%" y1="50%" x2="50%" y2="100%" stroke="white" stroke-width="1.5" />
+                                    </svg>
                                 </div>
                                 <div class="col-md-10">
                                     <h4 class="title-feature">TRADITIONAL GAMES</h4>
@@ -172,10 +172,6 @@
                                     <h4 class="title-feature">TBD</h4>
                                 </div>
                             </div>
-
-                            <svg width="100" height="200">
-                                <line x1="32" y1="-100" x2="32" y2="115" stroke="white" stroke-width="2" />
-                            </svg>
                         </div>
                     </div>
                 </div>
@@ -185,10 +181,10 @@
         <!-- SYSTEM REQUIREMENTS -->
         <div id="sys-req" class="sys-req content-center">
             <div class="container">
-                <p class="sys-req-title">Can my computer run this game?</p>
+                <p class="what-so-special">Can my computer run this game?</p>
                 <div class="row">
                     <div class="col-lg-6">
-                        <h3 class="section-title mb-lg-5">SYSTEM REQUIREMENTS</h3>
+                        <h3 class="section-title">SYSTEM REQUIREMENTS</h3>
                     </div>
                 </div>
                 <div class="row">
@@ -256,6 +252,7 @@
                         <div class="testimonial">
                             <div id="evan" class="profil">
                                 <div class="profil-detail">
+                                    <div class="avatar-background"></div>
                                     <img src="./images/image 2.jpg" alt="evan lathi" class="avatar">
                                     <p class="nama mt-lg-0">Evan Lathi<br><span style="color: grey;">PC Gamer</span></p>
                                     <div class="fa fa-twitter" style="color: grey;"></div>
@@ -265,6 +262,7 @@
                             </div>
                             <div id="jada" class="profil">
                                 <div class="profil-detail">
+                                    <div class="avatar-background"></div>
                                     <img src="./images/image 3.jpg" alt="jada griffin" class="avatar">
                                     <p class="nama mt-lg-0">Jada Griffin<br><span
                                             style="color: grey;">Nerdreactor</span></p>
@@ -279,6 +277,7 @@
 
                             <div id="aaron" class="profil">
                                 <div class="profil-detail">
+                                    <div class="avatar-background"></div>
                                     <img src="./images/image 1.jpg" alt="aaron williams" class="avatar">
                                     <p class="nama mt-lg-0">Aaron Williams <br><span style="color: grey;">Uproxx</span>
                                     </p>
@@ -338,7 +337,7 @@
                         <div class="card">
                             <div class="row">
                                 <div class="col-md-2"></div>
-                                <div class="col-md-7 d-flex mb-3 text-uppercase">
+                                <div class="col-md-7 d-flex mb-3 text-uppercase content-center">
                                     <div class="d-inline-flex justify-content-center px-2 px-md-2 px-lg-3 pt-3"> <a
                                             href="#jumbotron">main</a> </div>
                                     <div class="d-inline-flex justify-content-center px-2 px-md-2 px-lg-3 pt-3"> <a
@@ -398,7 +397,13 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
         </script>
-
+        <!-- ACTIVE NAV-LINK -->
+        <script>
+            $(".navbar .nav-link").on("click", function () {
+                $(".navbar").find(".active").removeClass("active");
+                $(this).addClass("active");
+            });
+        </script>
         <!-- on scroll -->
         <script>
             $(window).scroll(function () {

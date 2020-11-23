@@ -5,9 +5,10 @@ html {
 }
 
 .scrolled {
-  background-color: #0D0A09 !important;
+  background-color: #080A0B !important;
 }
 
+/*=================================== MOBILE VERSION =============================================*/
 .navbar {
   font-family: 'Open Sans', sans-serif;
   background: black;
@@ -112,13 +113,8 @@ html {
   font-size: 2em;
   letter-spacing: 3px;
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
-
-/* 
-.the-games {
-  width: 100%;
-} */
 
 .carousel-control-next,
 .carousel-control-prev {
@@ -197,8 +193,8 @@ html {
 }
 
 
-#sys-req .container p {
-  text-align: left;
+#sys-req .container .what-so-special {
+  text-align: center;
 }
 
 #sys-req .container .sys-req-title {
@@ -322,8 +318,8 @@ td:last-child {
   background-color: #FFB548;
   position: absolute;
   z-index: 0;
-  bottom: 0;
-left: 2px;
+  bottom: -3px;
+  left: 2px;
 } */
 
 .date {
@@ -331,25 +327,30 @@ left: 2px;
 }
 
 #subscribe {
-  background-color: #0D0A09;
-  height: 100vh;
+  height: 60vh;
+  background-color: #080A0B;
   background-image: url(./images/image.png);
-  background-position: left;
-  background-position-x: 15%;
+  background-size: contain;
   background-repeat: no-repeat;
+  background-position-x: 25%;
+  box-sizing: border-box;
   position: relative;
+  z-index: 1;
 }
 
 #subscribe::after {
   content: '';
-  background: rgb(22, 22, 22);
-  background: radial-gradient(circle, rgb(0, 0, 0) 9%, rgba(0, 0, 0, 1) 50%, rgb(0, 0, 0) 50%);
-  background-position: left;
-  background-repeat: no-repeat;
-  z-index: -10;
+  width: 100%;
+  height: 100%;
   position: absolute;
-  bottom: 15%;
-  left: 10%;
+  bottom: 0;
+  z-index: -10;
+  background: radial-gradient(15.52% 57.27% at 32.21% 47.47%, rgba(35, 15, 15, 0) 0%, rgba(0, 0, 0, 0) 21.1%, #080A0B 74%);
+}
+
+#subscribe .container {
+  position: relative;
+  z-index: 100;
 }
 
 .footer {
@@ -365,6 +366,7 @@ left: 2px;
   color: rgb(189, 189, 189);
   font-family: 'Open Sans', sans-serif;
   font-size: 12px;
+  text-align: center;
 }
 
 .card a:hover {
@@ -379,9 +381,13 @@ left: 2px;
   text-align: center;
 }
 
+.under-footer>* {
+  justify-content: center;
+}
+
 .privacy-policy {
   padding-top: 20px;
-  text-align: right;
+  text-align: center;
   text-decoration: none;
 }
 
@@ -471,6 +477,16 @@ svg {
   color: rgb(189, 189, 189);
 }
 
+.avatar-background {
+  width: 60px;
+  height: 60px;
+  background-color: #FFB548;
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+  left: 18px;
+}
+
 
 
 
@@ -538,10 +554,6 @@ svg {
     text-align: left;
   }
 
-  .the-games {
-    width: 100%;
-  }
-
   .carousel-control-prev {
     left: -10%;
     opacity: unset;
@@ -589,6 +601,14 @@ svg {
     background: radial-gradient(40% 60% at 70% 53.65%, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(4, 5, 6, 0.835) 40%, #080A0B 60%);
   }
 
+  #sys-req .container .what-so-special {
+    text-align: left;
+  }
+
+  #sys-req .container p {
+    text-align: left;
+  }
+
   /* scores desktop */
   #scores {
     height: 100vh;
@@ -633,18 +653,10 @@ svg {
     height: 80vh;
   }
 
-  #subscribe::after {
-    content: '';
-    width: 30%;
-    height: 100%;
-    background: radial-gradient(45.43% 53.19% at 50% 50%, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 46.15%, #080A0B 99.74%);
-    background-position: left;
-    background-repeat: no-repeat;
-    z-index: 0;
-    position: absolute;
-    bottom: 15%;
-    left: 10%;
-  }
+  /* #subscribe::after {
+    background: radial-gradient(40% 60% at 70% 53.65%, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(4, 5, 6, 0.835) 40%, #080A0B 60%);
+    background-position-x: 20%;
+  } */
 
   .subscribe-content form {
     margin-top: 30px;
@@ -661,6 +673,7 @@ svg {
 
   .privacy-policy {
     padding-top: 0;
+    text-align: right;
   }
 
 
@@ -687,7 +700,7 @@ svg {
     display: block;
     height: 14px;
     width: 14px;
-    background-color: #bbb;
+    background-color: rgb(2, 2, 2);
     border-radius: 50%;
     border: 2px solid white;
     background-color: transparent
@@ -696,7 +709,7 @@ svg {
   svg {
     display: block;
     position: absolute;
-    top: 250px;
+    /* top: 250px; */
   }
 
   #myBtn {
